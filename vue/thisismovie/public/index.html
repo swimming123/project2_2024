@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<!-- 이 HTML 파일은 기본적인 웹 페이지 구조를 정의하고, 여러 외부 스타일시트와 스크립트를 연결하여 페이지의 기능성과 디자인을 향상시키는 역할-->
+
+
+<html lang=""> 
+<head>
+  <meta charset="utf-8">
+   <!-- Internet Explorer 및 크롬에서 최신 렌더링 모드를 사용하도록 설정 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- 브라우저 호환성을 설정 -->
+
+ <!-- 웹 페이지의 내용을 설명하는 짧은 설명을 제공. 검색 엔진 최적화(SEO)에 중요-->
+  <meta name="description" content=""> <!-- 페이지의 설명을 지정-->
+
+  <!-- 반응형 웹 디자인을 위해 뷰포트를 설정 , 이는 모바일 장치에서 페이지가 적절하게 보이도록 함. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 뷰포트 설정을 지정 -->
+
+  <!-- iOS 기기의 홈 화면에 추가될 때 사용될 아이콘을 설정 -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- iOS에서 웹 페이지 아이콘을 설정 -->
+
+   <!-- Google Fonts에서 Lato 글꼴을 가져와 페이지에서 사용 -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'> <!-- Google Fonts를 이용한 글꼴 지정 -->
+
+  <!-- 여러 외부 CSS 파일을 페이지에 연결 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"><!-- Bootstrap CSS를 통해 페이지의 레이아웃과 스타일을 쉽게 구성 -->
+  <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome 아이콘 폰트를 사용하여 스타일리시한 아이콘을 웹 페이지에 추가 -->
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css"><!-- Bootstrap 테마를 적용하여 추가적인 스타일링 옵션을 제공 -->
+  <link rel="stylesheet" href="css/main.css"> <!-- 사이트의 주요 스타일을 정의하는 메인 CSS 파일 -->
+  
+   <!-- 추가적인 스타일시트 파일들 -->
+  <link rel="stylesheet" href="css/stakyard-web-font.css">
+  <link rel="stylesheet" href="css/nightstillcomes-web-font.css">
+  <link rel="stylesheet" href="css/linearicons-web-font.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- 위 파일들은 반응형 디자인을 위한 스타일시트, 다양한 화면 크기에서 콘텐츠가 잘 보이도록 조정 -->
+
+  <title></title> <!-- 페이지 제목을 동적으로 설정<%= htmlWebpackPlugin.options.title %> -->
+  <!-- 페이지의 제목을 설정합니다. 동적으로 제목을 설정하기 위한 템플릿 코드가 주석으로 포함됨. -->
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Modernizr 스크립트를 통해 브라우저의 HTML5 및 CSS3 지원을 감지 -->
+<!-- HTML 파일의 <head> 섹션에 추가 -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body> 
+
+  <!-- 필요한 JavaScript 파일들을 로드 -->
+  <script src="js/vendor/jquery-1.11.2.min.js"></script><!-- jQuery 라이브러리, 다양한 자바스크립트 기능을 쉽게 사용할 수 있게 해줌. -->
+  <script src="js/vendor/bootstrap.min.js"></script> <!-- Bootstrap 자바스크립트 파일, 모달, 드롭다운 등의 기능을 사용할 수 있게 해줌-->
+  <script src="js/masonry.pkgd.min.js"></script> <!-- Masonry 레이아웃 라이브러리, 그리드 기반의 레이아웃을 구현할 때 사용 -->
+  <script src="js/main.js"></script><!-- 사이트의 주요 자바스크립트 로직을 포함하는 스크립트 파일 -->
+  <noscript>
+     <!-- JavaScript가 비활성화 되어있을 경우 사용자에게 경고 메시지를 표시합니다. -->
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div> <!-- Vue.js 애플리케이션의 마운트 포인트, Vue 인스턴스가 이 div에 연결 -->
+
+</body>
+</html>

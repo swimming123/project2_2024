@@ -1,0 +1,15 @@
+ALTER SESSION SET NLS_DATE_FORMAT='rr/mm/dd';
+CREATE TABLE movie_upboard(
+num NUMBER PRIMARY KEY,
+title VARCHAR2 (100),
+writer VARCHAR2(300),
+content VARCHAR2(200),
+hit NUMBER(10),
+reip VARCHAR2(34),
+bdate date,
+imgn VARCHAR2(30)
+);
+
+
+CREATE SEQUENCE movie_upboard_seq
+INCREMENT BY 1 START WITH 1;

@@ -1,0 +1,13 @@
+<!-- movie_upboard SQL문 -->
+
+-- ALTER SESSION SET NLS_DATE_FORMAT='rr/mm/dd';
+-- CREATE TABLE movie_upboard(
+-- num NUMBER PRIMARY KEY,
+-- title VARCHAR2 (100),
+-- writer VARCHAR2(300),
+-- CONTENT VARCHAR2(200),
+-- imgn VARCHAR2(30),
+-- bdate date
+-- );
+-- CREATE SEQUENCE movie_upboard_seq
+-- INCREMENT BY 1 START WITH 1;

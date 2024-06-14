@@ -1,0 +1,49 @@
+{% include "header.html" %}
+<div id="content" class="container mt-5">
+  <h2 class="text-center">딥러닝 샘플 예제</h2>
+<div class="row">
+    <form method="post" name="form1" id="form1" enctype="multipart/form-data">
+    {% csrf_token %}
+        <fieldset style="width:400px; margin:auto;">
+            <legend>딥러닝 샘플 예제</legend>
+            <p>
+                <label for="category">이미지 이름 : </label>
+                <input type="text" name="category" id="category">
+            </p>
+            <p>
+                <label for="file1">이미지 : </label><input type="file" name="file1" id="file1">
+            </p>
+            <p>
+              <img id="preview" src="#" alt="이미지 미리보기" style="display:none; width: 100%; max-width: 400px;"/>
+            </p>
+            <p>
+                <input type="button" id="wrtBtn" value="등록">&nbsp;<input type="button" id="listBtn" value="목록">
+            </p>
+        </fieldset>
+    </form>
+</div>
+</div>
+<script>
+    $(function(){
+        $('#listBtn').click(function(){
+            location='/';
+        });
+        $('#wrtBtn').click(function(){
+            document.form1.action='yes_no'
+            document.form1.submit();
+        });
+        // 이미지 미리 보기 기능
+        $('#file1').change(function(){
+          var file = this.files[0];
+          if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              $('#preview').attr('src', e.target.result);
+              $('#preview').show();
+            }
+            reader.readAsDataURL(file);
+          }
+        });
+    });
+</script>
+{% include "footer.html" %}
