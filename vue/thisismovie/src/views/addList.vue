@@ -9,7 +9,7 @@
                 <p>Commercial content will not be uploaded.</p>
                 <br>
                 <h4>image Preview</h4>
-                <img v-if="files.length > 0" v-bind:src="files[0].preview" class="img-thumbnail" style="max-width: 400px; max-height: 500px;"></div>
+                <img v-if="files.length > 0" v-bind:src="files[0].preview" class="img-thumbnail" style="max-width: 300px; max-height: 500px;"></div>
           </div>
   
           <div class="col-md-8 col-sm-6 col-xs-12">
@@ -108,6 +108,7 @@
                 console.log(response); // JSON 데이터를 콘솔에 출력
                 this.imgdata = JSON.stringify(response.data, null, 2); // JSON 데이터를 문자열로 변환하여 저장
                 const imgDataParsed = JSON.parse(this.imgdata)["spam"];
+                console.log("imgdata"+this.imgdata)
                 if (imgDataParsed === 1) {
                   alert('상업적인 사진은 업로드되지 않습니다.');
                 }

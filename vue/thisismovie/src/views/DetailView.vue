@@ -9,7 +9,7 @@
             <p>
               Here you can view detailed user information. Please contact support if you need further assistance.
             </p>
-            <img v-if="imageSrc" :src="imageSrc" alt="Image" class="img-thumbnail" style="max-width: 400px; max-height: 500px;">
+            <img class="img-thumbnail" :src="`http://localhost/thismovie0607/uboard/images?filename=${result.imgn}`" alt="Image" style="max-width: 300px; max-height: 500px;">
       </div>
         </div>
         <!-- 오른쪽 섹션: 사용자 세부 정보 폼 -->
@@ -81,9 +81,7 @@ export default {
           // console.log("resp.data!!!", resp.data);
           this.result = resp.data;
           // 이미지 URL 설정
-          if (this.result.imagePath) {
-            this.imageSrc = `http://192.168.0.39/thismovie0607/uploads/${this.result.imgn}`;
-          }
+          // <img class="imgstyle" :src="`http://localhost/thismovie0607/uboard/images?filename=${e.oimg}`" alt="Image">
         })
         .catch((err) => {
           console.error(err);

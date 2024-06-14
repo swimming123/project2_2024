@@ -21,12 +21,11 @@
   </div>
 
               <br>
-              <h4> "스팸단어 구분하기"</h4>
+              <h4> 주요 기능 소개</h4>
               <br>
-              <p>
-                상세설명 기록 예정
-              
-              </p>
+              <p>1. Google Cloud Vision - OCR 을 사용하여 이미지에 있는 문자를 식별하고 </p>
+              <p>2. Gaussian NB로 학습한 스팸 예측 시스템으로 이미지에서 추출한 문자에 상업적인 단어가 포함되어 있는지 검사</p>
+              <p>3. Vue 단에서 dJango로부터 스팸 여부 Json 데이터를 axios로 받은 뒤 스팸이 아닌 정상으로 판별한 이미지만 등록 가능하게 했다.</p>
               <img src="img/pf1.jpg" alt="" class="grayscale" />
             </div>
           </div>

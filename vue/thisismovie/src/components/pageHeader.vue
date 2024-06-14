@@ -5,12 +5,12 @@
      <!-- 네비게이션 바 -->
     <nav class="navbar">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <!-- <router-link to="/about">About</router-link> | -->
       <router-link to="/addList">Add Posters</router-link> |
       <router-link to="/list">UpList</router-link> |
-      <router-link to="/member">MemList</router-link> |
-      <router-link to="/profile">Profile</router-link> |
-      <router-link to="/fileup">FileUpLoad</router-link>
+      <!-- <router-link to="/member">MemList</router-link> | -->
+      <!-- <router-link to="/profile">Profile</router-link> | -->
+      <!-- <router-link to="/fileup">FileUpLoad</router-link> -->
     </nav>
     <!-- Bootstrap의 "container" 클래스를 사용하여 내용을 가운데 정렬하고 패딩을 제공 -->
     <div class="container">
@@ -24,10 +24,10 @@
             <div class="main_header">
               <h2>ICT</h2>
               <h3>Group Project</h3>
-              <p>June 10 - June 12, 2024</p>
+              <p>June 10 - June 18, 2024</p>
               <!-- 사용자 행동 유도 버튼 -->
               <button class="btn btn-default btn-transparent" @click="goToList" type="button">
-                UpList
+                Let's watch a movie tonight!
               </button>
             </div>
             <!-- 아이콘을 사용한 하이퍼링크. 일반적으로 페이지의 다른 섹션으로 스크롤하도록 설정 가능

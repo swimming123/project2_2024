@@ -10,10 +10,10 @@
           </div>
         </div>
         <div class="col-md-8 col-sm-12 col-xs-12 info">
-          <h1>List</h1>
-          <h1 class="user-list-title text-center">Up List</h1>
+          <!-- <h1>List</h1> -->
+          <h1 class="user-list-title text-center">Movie information</h1>
           <div class="d-flex justify-content-end">
-            <router-link to="/user/save" class="btn" style="background-color: #6c757d; color: white;">Add User</router-link>
+            <router-link to="/addList" class="btn" style="background-color: #6c757d; color: white;">Add Movie</router-link>
           </div>
           <table class="table table-hover mt-3">
             <thead class="table-dark">
@@ -40,13 +40,20 @@
                 <td>{{row.imgn}}</td>
               </tr>
             </tbody>
-            <!-- <tfoot>
-              <tr><td colspan="9">{{list}}</td></tr>
-            </tfoot> 리스트 표 밑에 보여지게 하는 부분 -->
+            <tfoot>
+              <!-- <tr><td colspan="9">{{list}}</td></tr> -->
+              <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                  <li v-for="page in totalPages" :key="page" class="page-item" :class="{ active: page === currentPage } ">
+                      <a class="page-link" @click="changePage(page)">{{ page }}</a>
+                  </li>
+                  </ul>
+              </nav>
+            </tfoot>
           </table>
-          <button class="btn btn-default mt-3" type="submit">
+          <!-- <button class="btn btn-default mt-3" type="submit">
             View Works<i class="lnr lnr-chevron-down-circle"></i>
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -62,18 +69,32 @@ export default {
   },
   data() {
     return {
-      list: []
+      list: [], // 전체 리스트
+      currentPage: 1, // 현재 페이지
+      totalPages: 0 // 총 페이지 수
     }
   },
   methods: {
     fetchData() {
-      axios.get("http://192.168.0.39/thismovie0607/uboard/upList")
+      axios.get("http://192.168.0.39/thismovie0607/uboard/upList", {
+        params: {
+          cPage: this.currentPage, // 현재 페이지 전달
+          // 필요한 경우 검색 유형 및 값도 전달할 수 있습니다
+        }
+      })
       .then((resp) => {
         this.list = resp.data
+        console.log(resp.data);
+        this.list = resp.data.list; // 데이터 리스트 할당
+        this.totalPages = resp.data.totalPages; // 총 페이지 수 할당
       })
       .catch((err) => {
         console.error("Error fetching data: ", err)
       })
+    },
+    changePage(page) {
+      this.currentPage = page;
+      this.fetchData();
     },
     href(row) {
       this.$router.push({name: 'DetailView', params: row})
