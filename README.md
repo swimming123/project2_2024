@@ -58,5 +58,5 @@ CREATE SEQUENCE movie_upboard_seq
 INCREMENT BY 1 START WITH 1;
 
 
-
+* 파일 업로드 하는 방법 참고 : https://www.notion.so/syyoon3797/import-2f4945483ef6460881948d7c22e677fb
 * 개선할 부분 : models.py에 학습 데이터를 딥러닝 모델로 변경해서 모델을 저장해서 불러오기
