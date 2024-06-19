@@ -33,9 +33,9 @@ const routes = [
     component : () => import('../views/AddForm.vue')
   },
   {
-    path: '/member', //axios 방식 
-    name:'MemListView',
-    component : () => import('../views/MemListView.vue')
+    path: '/NewMemberList', //axios 방식 
+    name:'NewMemberList',
+    component : () => import('../views/NewMemberList.vue')
   },
   {
     // DetailView 
@@ -45,10 +45,15 @@ const routes = [
     name:'DetailView',
     component : () => import('../views/DetailView.vue')
   },
-  { //member 입력폼
+  { //게시판 입력폼
     path: '/addList', //axios 방식
     name:'addList',
     component : () => import('../views/addList.vue')
+  },
+  { //회원가입폼
+    path: '/joinUs', //axios 방식
+    name:'joinUs',
+    component : () => import('../views/joinUs.vue')
   },
 ]
 

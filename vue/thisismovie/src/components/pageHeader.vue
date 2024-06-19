@@ -8,8 +8,8 @@
       <!-- <router-link to="/about">About</router-link> | -->
       <router-link to="/addList">Add Posters</router-link> |
       <router-link to="/list">UpList</router-link> |
-      <!-- <router-link to="/member">MemList</router-link> | -->
-      <!-- <router-link to="/profile">Profile</router-link> | -->
+      <router-link to="/NewMemberList">NewMemberList</router-link> |
+      <router-link to="/joinUs">JOIN US</router-link> |
       <!-- <router-link to="/fileup">FileUpLoad</router-link> -->
     </nav>
     <!-- Bootstrap의 "container" 클래스를 사용하여 내용을 가운데 정렬하고 패딩을 제공 -->

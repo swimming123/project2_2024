@@ -99,7 +99,7 @@
                 formData.append("file1", this.selectedFiles[i]);
                 formData.append("category", this.imageName);
             }
-            axios.post('http://192.168.0.131:9000/thisisspam/insert_img', formData, {
+            axios.post('http://192.168.0.36:9000/thisisspam/insert_img', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
