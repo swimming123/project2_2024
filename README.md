@@ -56,3 +56,7 @@ imgn VARCHAR2(30)
 CREATE SEQUENCE movie_upboard_seq
 
 INCREMENT BY 1 START WITH 1;
+
+
+
+* 개선할 부분 : models.py에 학습 데이터를 딥러닝 모델로 변경해서 모델을 저장해서 불러오기
