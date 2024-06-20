@@ -10,6 +10,7 @@
       <router-link to="/list">UpList</router-link> |
       <router-link to="/NewMemberList">NewMemberList</router-link> |
       <router-link to="/joinUs">JOIN US</router-link> |
+      <router-link to="/fashion">fashion</router-link> |
       <!-- <router-link to="/fileup">FileUpLoad</router-link> -->
     </nav>
     <!-- Bootstrap의 "container" 클래스를 사용하여 내용을 가운데 정렬하고 패딩을 제공 -->

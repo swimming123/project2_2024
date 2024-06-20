@@ -55,6 +55,11 @@ const routes = [
     name:'joinUs',
     component : () => import('../views/joinUs.vue')
   },
+  { //과제
+    path: '/fashion', //axios 방식
+    name:'fashion',
+    component : () => import('../views/fashion.vue')
+  },
 ]
 
 const router = createRouter({
